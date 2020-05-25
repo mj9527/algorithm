@@ -23,7 +23,7 @@ public:
         if (iter != m_ls.end()) {
             iter->second += 1;
         } else {
-            iter->second = 1;
+            m_ls.insert(std::make_pair(key, 1));
         }
     }
 
@@ -34,6 +34,8 @@ public:
             if (iter->second == 1) {
                 // erase
                 m_ls.erase(iter);
+
+
             } else {
                 iter->second -= 1;
             }
@@ -54,8 +56,6 @@ public:
 
 private:
     std::map<string, int> m_ls;
-    string m_maxKey;
-    string m_minKye;
 };
 
 void TestAllOne() {
