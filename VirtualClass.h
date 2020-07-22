@@ -23,6 +23,9 @@ public:
 
 void TestVirtual() {
     VirtualClass* p = nullptr;
+    int* q = nullptr;
+    std::cout << sizeof(VirtualClass) << std::endl;
+    std::cout << sizeof(q) << std::endl;
     p->funcA();
     p->funcB();
 }

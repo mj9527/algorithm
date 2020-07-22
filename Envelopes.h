@@ -65,6 +65,13 @@ void TestEnvelopes() {
     Envelopes e;
     int sum = e.maxEnvelopes(envelopes);
     std::cout << sum << std::endl;
+
+    int a = 1;
+    int b = 2;
+    if (a && b) {
+
+    }
+    if (a ||)
 }
 
 
