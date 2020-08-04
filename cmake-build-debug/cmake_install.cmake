@@ -1,4 +1,4 @@
-# Install script for directory: /Users/zhengjunming/Documents/c_git/algorithm
+# Install script for directory: /Users/mjzheng/Documents/mj_git/algorithm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/zhengjunming/Documents/c_git/algorithm/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/mjzheng/Documents/mj_git/algorithm/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
