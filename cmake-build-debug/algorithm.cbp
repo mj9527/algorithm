@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/mjzheng/Documents/mj_git/algorithm/StringNumber.cpp">
+			<Option target="algorithm"/>
+		</Unit>
+		<Unit filename="/Users/mjzheng/Documents/mj_git/algorithm/StringNumber.h">
+			<Option target="algorithm"/>
+		</Unit>
 		<Unit filename="/Users/mjzheng/Documents/mj_git/algorithm/main.cpp">
 			<Option target="algorithm"/>
 		</Unit>

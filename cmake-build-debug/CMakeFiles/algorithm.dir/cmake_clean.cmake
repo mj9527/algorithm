@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/algorithm.dir/StringNumber.cpp.o"
   "CMakeFiles/algorithm.dir/main.cpp.o"
   "algorithm"
   "algorithm.pdb"

@@ -96,13 +96,42 @@ void PrintInt(int&&i) {
     std::cout << "right     " << i << std::endl;
 }
 
-void TestLR() {
-    PrintInt(1);
-    MyString name("mj");
-    MyString sex("sex");
-    LeftAndRight a(name, sex);
+void process_value(int& i)
+{
+    std::cout << "LValue processed: " << i << std::endl;
 
+    i++;
 }
+
+void process_value(int&& i)
+{
+    std::cout << "RValue processed: " << i << std::endl;
+    process_value(i);
+//    i = 10;
+//    std::cout << "modify " << i << std::endl;
+}
+
+void TestLR() {
+//    PrintInt(1);
+//    MyString name("mj");
+//    MyString sex("sex");
+//    LeftAndRight a(name, sex);
+
+    int a = 0;
+    process_value(a);
+
+    process_value(1);
+
+//    int&& b = 10;
+//    process_value(b);
+//    std::cout << "out " << b << std::endl;
+//
+//    int c = 10;
+//    process_value(c);
+//    std::cout << "out " << c << std::endl;
+}
+
+
 
 
 #endif //ALGORITHM_LEFTANDRIGHT_H

@@ -13,13 +13,12 @@ using namespace std;
 
 class Singleton {
 private:
-    Singleton(int other) {
-        a = other;
+    Singleton() { // 构造函数私有化
     }
 
-    Singleton(const Singleton& other) =delete; // 拷贝构造函数
+    Singleton(const Singleton& other) =delete; // 禁止拷贝构造函数
 
-    Singleton& operator=(const Singleton& other) = delete; //// 赋值函数
+    Singleton& operator=(const Singleton& other) = delete; // 禁止赋值函数
 
 public:
     ~Singleton() {}
@@ -28,21 +27,20 @@ public:
         if (nullptr == m_singleton) {
             std::lock_guard<std::mutex> lock(m_mutex);
             if (nullptr == m_singleton) {
-                m_singleton = new Singleton(7);
+                m_singleton = new Singleton();
             }
         }
         return m_singleton;
     }
 
     static Singleton* GetInstance2() {
-        static Singleton instance(7);
+        static Singleton instance;
         return &instance;
     }
 
 private:
     static Singleton* m_singleton;
     static std::mutex m_mutex;
-    int a;
 };
 
 Singleton* Singleton::m_singleton = nullptr;

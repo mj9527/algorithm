@@ -147,13 +147,13 @@ void TestSequence() {
 }
 
 void AddTotal(int index) {
-    char buf[256];
-    sprintf(buf, "%d %d %d\n", index, std::this_thread::get_id());
-    std::cout << buf;
-    for (long long i=0; i<100000000LL; i++) {
-        total += i;
-    }
-    std::cout << total << std::endl;
+//    char buf[256];
+//    sprintf(buf, "%d %d %d\n", index, std::this_thread::get_id());
+//    std::cout << buf;
+//    for (long long i=0; i<100000000LL; i++) {
+//        total += i;
+//    }
+//    std::cout << total << std::endl;
 }
 
 void TestAdd() {

@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhengjunming/Documents/c_git/algorithm/main.cpp" "/Users/zhengjunming/Documents/c_git/algorithm/cmake-build-debug/CMakeFiles/algorithm.dir/main.cpp.o"
+  "/Users/mjzheng/Documents/mj_git/algorithm/StringNumber.cpp" "/Users/mjzheng/Documents/mj_git/algorithm/cmake-build-debug/CMakeFiles/algorithm.dir/StringNumber.cpp.o"
+  "/Users/mjzheng/Documents/mj_git/algorithm/main.cpp" "/Users/mjzheng/Documents/mj_git/algorithm/cmake-build-debug/CMakeFiles/algorithm.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -123,6 +123,33 @@ algorithm/fast:
 	$(MAKE) -f CMakeFiles/algorithm.dir/build.make CMakeFiles/algorithm.dir/build
 .PHONY : algorithm/fast
 
+StringNumber.o: StringNumber.cpp.o
+
+.PHONY : StringNumber.o
+
+# target to build an object file
+StringNumber.cpp.o:
+	$(MAKE) -f CMakeFiles/algorithm.dir/build.make CMakeFiles/algorithm.dir/StringNumber.cpp.o
+.PHONY : StringNumber.cpp.o
+
+StringNumber.i: StringNumber.cpp.i
+
+.PHONY : StringNumber.i
+
+# target to preprocess a source file
+StringNumber.cpp.i:
+	$(MAKE) -f CMakeFiles/algorithm.dir/build.make CMakeFiles/algorithm.dir/StringNumber.cpp.i
+.PHONY : StringNumber.cpp.i
+
+StringNumber.s: StringNumber.cpp.s
+
+.PHONY : StringNumber.s
+
+# target to generate assembly for a file
+StringNumber.cpp.s:
+	$(MAKE) -f CMakeFiles/algorithm.dir/build.make CMakeFiles/algorithm.dir/StringNumber.cpp.s
+.PHONY : StringNumber.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... algorithm"
+	@echo "... StringNumber.o"
+	@echo "... StringNumber.i"
+	@echo "... StringNumber.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
