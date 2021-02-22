@@ -36,6 +36,7 @@
 #include "H2O.h"
 #include "StringNumber.h"
 #include "GroupAnagrams.h"
+#include "TwoSum/TwoSum.h"
 
 void TestArray() {
     int **p = new int*[10];
@@ -131,10 +132,11 @@ int main() {
 
     //TestGroupAnagrams();
 
-    MyPoint pt = {10, 10};
-
-    MyPoint pt1(20, 20);
-    std::cout << pt.x << pt.y << std::endl;
+//    MyPoint pt = {10, 10};
+//
+//    MyPoint pt1(20, 20);
+//    std::cout << pt.x << pt.y << std::endl;
+    TwoSum::testTwoSum();
     return 0;
 }
 
