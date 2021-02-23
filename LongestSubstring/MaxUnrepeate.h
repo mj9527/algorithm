@@ -32,31 +32,6 @@ public:
         return max(max(max1, max2), max3);
     }
 
-//    int midest(string s, int from, int to, int m) {
-//        std::map<char, int> a;
-//        int i=m;
-//        for (; i>=from; i--) {
-//            if (a.find(s[i]) != a.end()) {
-//                break;
-//            }
-//            a.insert(std::make_pair(s[i], i));
-//        }
-//
-//        for (int j=m+1; j<to; j++) {
-//            auto iter = a.find(s[j]);
-//            if (iter != a.end()) {
-//                std::cout << "find" <<std::endl;
-//                if (iter->second == i+1) {
-//                    iter->second = j;
-//                    continue;
-//                 }
-//                break;
-//            }
-//            a.insert(std::make_pair(s[j], j));
-//        }
-//        return a.size();
-//    }
-
     int midest(string s, int from, int to, int m) {
         std::set<char> a;
 
