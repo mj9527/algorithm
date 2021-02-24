@@ -14,7 +14,6 @@
 #include "MaxIncr.h"
 #include "MoveSome.h"
 #include "StringMulti.h"
-#include "MaxUnrepeated.h"
 #include "SubString.h"
 #include "QuickSort.h"
 #include "MaxIsland.h"
@@ -37,6 +36,8 @@
 #include "StringNumber.h"
 #include "GroupAnagrams.h"
 #include "TwoSum/TwoSum.h"
+#include "MyAtoi/MyAtoi.h"
+#include "MaxArea/MaxArea.h"
 
 void TestArray() {
     int **p = new int*[10];
@@ -137,6 +138,8 @@ int main() {
 //    MyPoint pt1(20, 20);
 //    std::cout << pt.x << pt.y << std::endl;
     TwoSum::testTwoSum();
+    MyAtoi::testMyAtoi();
+    MaxArea::testMaxArea();
     return 0;
 }
 

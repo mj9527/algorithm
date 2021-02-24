@@ -71,6 +71,4 @@ void TestKNum() {
     }
 }
 
-
-
 #endif //ALGORITHM_ABSUM_H
