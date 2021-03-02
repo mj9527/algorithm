@@ -26,7 +26,6 @@
 #include "Singleton.h"
 #include "ZeroEventOdd.h"
 #include "RotateMatrix.h"
-#include "Parenthesis.h"
 #include "RemoveElement.h"
 #include "LeftAndRight.h"
 #include "LambdaSample.h"
@@ -38,6 +37,7 @@
 #include "TwoSum/TwoSum.h"
 #include "MyAtoi/MyAtoi.h"
 #include "MaxArea/MaxArea.h"
+#include "GenerateParenthesis/GenerateParenthesis.h"
 
 void TestArray() {
     int **p = new int*[10];
@@ -140,6 +140,7 @@ int main() {
     TwoSum::testTwoSum();
     MyAtoi::testMyAtoi();
     MaxArea::testMaxArea();
+    GenerateParenthesis::TestParenthesis();
     return 0;
 }
 
