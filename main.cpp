@@ -26,7 +26,6 @@
 #include "Singleton.h"
 #include "ZeroEventOdd.h"
 #include "RotateMatrix.h"
-#include "RemoveElement.h"
 #include "LeftAndRight.h"
 #include "LambdaSample.h"
 #include "PtrSample.h"
@@ -38,6 +37,7 @@
 #include "MyAtoi/MyAtoi.h"
 #include "MaxArea/MaxArea.h"
 #include "GenerateParenthesis/GenerateParenthesis.h"
+#include "RemoveElement/RemoveElement.h"
 
 void TestArray() {
     int **p = new int*[10];
