@@ -38,6 +38,7 @@
 #include "MaxArea/MaxArea.h"
 #include "GenerateParenthesis/GenerateParenthesis.h"
 #include "RemoveElement/RemoveElement.h"
+#include "LongestValidParentheses/LongestValidParentheses.h"
 
 void TestArray() {
     int **p = new int*[10];
@@ -137,10 +138,11 @@ int main() {
 //
 //    MyPoint pt1(20, 20);
 //    std::cout << pt.x << pt.y << std::endl;
-    TwoSum::testTwoSum();
-    MyAtoi::testMyAtoi();
-    MaxArea::testMaxArea();
-    GenerateParenthesis::TestParenthesis();
+//    TwoSum::testTwoSum();
+//    MyAtoi::testMyAtoi();
+//    MaxArea::testMaxArea();
+//    GenerateParenthesis::TestParenthesis();
+    LongestValidParentheses::testLongestValidParentheses();
     return 0;
 }
 
