@@ -22,12 +22,10 @@
 #include "VirtualClass.h"
 #include "MaxKuahao.h"
 #include "Singleton.h"
-#include "ZeroEventOdd.h"
 #include "RotateMatrix.h"
 #include "LeftAndRight.h"
 #include "LambdaSample.h"
 #include "PtrSample.h"
-#include "SequencePrint.h"
 #include "H2O.h"
 #include "StringNumber.h"
 #include "GroupAnagrams.h"
@@ -38,6 +36,11 @@
 #include "RemoveElement/RemoveElement.h"
 #include "LongestValidParentheses/LongestValidParentheses.h"
 #include "AddTwoBigNumber/AddTwoBigNumber.h"
+#include "SearchRotate/RotateSearch.h"
+#include "CppThread/CppThread.h"
+#include "SequencePrint/SequencePrint.h"
+#include "FooBar/FooBar.h"
+#include "ZeroEventOdd/ZeroEventOdd.h"
 
 void TestArray() {
     int **p = new int*[10];
@@ -143,7 +146,14 @@ int main() {
 //    MaxArea::testMaxArea();
 //    GenerateParenthesis::TestParenthesis();
     //LongestValidParentheses::testLongestValidParentheses();
-    AddTwoBigNumber::testAddTwoBigNumber();
+    //AddTwoBigNumber::testAddTwoBigNumber();
+    //RotateSearch::TestSearch();
+    //CppThread::testThread();
+    //MultiThread::TestSequence();
+    //MultiThread::testFooBar();
+
+    MultiThread::testZeroEvenOdd();
+
     return 0;
 }
 
