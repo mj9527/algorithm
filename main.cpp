@@ -25,8 +25,6 @@
 #include "RotateMatrix.h"
 #include "LeftAndRight.h"
 #include "LambdaSample.h"
-#include "PtrSample.h"
-#include "H2O.h"
 #include "StringNumber.h"
 #include "GroupAnagrams.h"
 #include "TwoSum/TwoSum.h"
@@ -41,6 +39,8 @@
 #include "SequencePrint/SequencePrint.h"
 #include "FooBar/FooBar.h"
 #include "ZeroEventOdd/ZeroEventOdd.h"
+#include "H2O/H2O.h"
+#include "FizzBuzz/FizzBuzz.h"
 
 void TestArray() {
     int **p = new int*[10];
@@ -152,8 +152,10 @@ int main() {
     //MultiThread::TestSequence();
     //MultiThread::testFooBar();
 
-    MultiThread::testZeroEvenOdd();
+    //MultiThread::testZeroEvenOdd();
+    //MultiThread::TestH2O();
 
+    MultiThread::TestFizzBuzz();
     return 0;
 }
 
