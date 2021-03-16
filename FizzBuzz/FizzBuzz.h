@@ -90,8 +90,6 @@ namespace MultiThread {
         std::function<void(int i)> f4 = [](int i){printf("%d ", i);};
         std::thread t4(&FizzBuzz::number, &f, f4);
 
-        std::recursive_mutex
-
         t1.join();
         t2.join();
         t3.join();

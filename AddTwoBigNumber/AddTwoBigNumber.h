@@ -53,19 +53,26 @@ namespace AddTwoBigNumber {
         }
     };
 
-
+    struct NumberPair {
+        std::string num1;
+        std::string num2;
+        std::string target;
+    };
 
     void testAddTwoBigNumber() {
         std::string num1 = "9999999898";
         std::string num2 = "6789";
         std::string target = "10000006687";
-        Solution s;
-        std::string result = s.bigNumberAdd(num1, num2);
 
-        if (target != result) {
-            std::cout << "error " << target << " " << result << std::endl;
-        } else {
-            std::cout << "right " << result << std::endl;
+        std::vector<NumberPair> testList = {{"9999999898", "6789", "10000006687"}, {"9999", "1", "10000"}};
+        for (auto& item : testList) {
+            Solution s;
+            std::string result = s.bigNumberAdd(item.num1, item.num2);
+            if (item.target != result) {
+                std::cout << "error " << target << " " << result << std::endl;
+            } else {
+                std::cout << "right " << result << std::endl;
+            }
         }
     }
 }

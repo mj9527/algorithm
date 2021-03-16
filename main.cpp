@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "RecoveryIP.cpp"
 #include "MergeSet.h"
 #include "MaxSquare.h"
 #include "SubArray.h"
@@ -41,6 +40,7 @@
 #include "ZeroEventOdd/ZeroEventOdd.h"
 #include "H2O/H2O.h"
 #include "FizzBuzz/FizzBuzz.h"
+#include "RecoveryIP/RecoveryIP.h"
 
 void TestArray() {
     int **p = new int*[10];
@@ -81,6 +81,31 @@ struct MyPoint {
     }
 };
 
+// 32位机器
+struct xx {
+    long long x1; // 8
+    char x2; // 1
+    int x3; // 4
+    char x4[2]; // 2
+    static int x5;
+};
+
+int xx::x5 = 10;
+
+void testInt() {
+    int a = 1;
+    a += (++a) + (a++);
+
+    int b = ++a; // b=2; a=2;
+    int c = a++; c = 2; a=3;
+    a += b + c;
+
+    std::cout << a << std::endl;
+
+    xx p;
+    std::cout << xx::x5 << std::endl;
+
+}
 
 extern void TestClass();
 
@@ -155,7 +180,10 @@ int main() {
     //MultiThread::testZeroEvenOdd();
     //MultiThread::TestH2O();
 
-    MultiThread::TestFizzBuzz();
+    //MultiThread::TestFizzBuzz();
+    //testInt();
+
+    RecoveryIP::TestIP();
     return 0;
 }
 
