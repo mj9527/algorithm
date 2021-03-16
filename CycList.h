@@ -33,6 +33,22 @@ class CycList {
         }
 
     }
+
+    bool hasCycle(ListNode *head) {
+        if (head == nullptr || head->next == nullptr) {
+            return false;
+        }
+        ListNode* slow = head;
+        ListNodw* fast = head;
+        while (fast != nullptr && fast->next != nullptr) {
+            fast = fast->next->next;
+            slow = slow->next;
+            if (fast == slow) {
+                return true;
+            }
+        }
+        return false;
+    }
 };
 
 

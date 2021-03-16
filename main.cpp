@@ -183,7 +183,8 @@ int main() {
     //MultiThread::TestFizzBuzz();
     //testInt();
 
-    RecoveryIP::TestIP();
+    //RecoveryIP::TestIP();
+    testMin();
     return 0;
 }
 
