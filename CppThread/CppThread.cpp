@@ -36,9 +36,9 @@ int ThreadModel::StopThread() {
     std::cout << "start stop thread" << std::endl;
 
     exit_flag_ = true;
-    notifier_.notify_one();
-    std::unique_lock<std::mutex> locker(mutex_);
-    notifier_.wait(locker, [this] {
+    work_event_.notify_one();
+    std::unique_lock<std::mutex> locker(exit_mutex_);
+    exit_event_.wait(locker, [this] {
         return !is_running_;
     });
 
@@ -48,14 +48,14 @@ int ThreadModel::StopThread() {
 
 int ThreadModel::WakeupThread() {
     wakeup_flag_ = true;
-    notifier_.notify_one();
+    work_event_.notify_one();
 }
 
 void ThreadModel::Run() {
     is_running_ = true;
     while (!exit_flag_) {
-        std::unique_lock<std::mutex> locker(mutex_);
-        notifier_.wait(locker, [this] {
+        std::unique_lock<std::mutex> locker(work_mutex_);
+        work_event_.wait(locker, [this] {
             return (exit_flag_ == true) || (wakeup_flag_ == true);
         });
         if (exit_flag_) {
@@ -67,7 +67,7 @@ void ThreadModel::Run() {
     }
     is_running_ = false;
     std::cout << "thread terminate" << std::endl;
-    notifier_.notify_one();
+    exit_event_.notify_one();
 }
 
 void ThreadModel::SampleStack() {

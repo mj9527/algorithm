@@ -30,8 +30,11 @@ namespace CppThread {
         void SampleStack();
 
     private:
-        std::condition_variable notifier_;
-        std::mutex mutex_;
+        std::condition_variable work_event_;
+        std::mutex work_mutex_;
+
+        std::condition_variable exit_event_;
+        std::mutex exit_mutex_;
 
     private:
         std::atomic<bool> wakeup_flag_;
