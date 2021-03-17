@@ -9,15 +9,35 @@
 #include <iostream>
 
 namespace CppThread {
+    void TestThreadModel();
 
-    void ThreadFunc(int a, int b) {
-        std::cout << a  << " " << b << std::endl;
-    }
+    class ThreadModel {
+    public:
+        ThreadModel();
 
-    void testThread() {
-        std::thread t(ThreadFunc, 100, 200);
-        t.join();
-    }
+        virtual ~ThreadModel();
+
+    public:
+        int StartThread();
+
+        int StopThread();
+
+        int WakeupThread();
+
+    protected:
+        void Run();
+
+        void SampleStack();
+
+    private:
+        std::condition_variable notifier_;
+        std::mutex mutex_;
+
+    private:
+        std::atomic<bool> wakeup_flag_;
+        std::atomic<bool> exit_flag_;
+        std::atomic<bool> is_running_;
+    };
 }
 
 #endif //ALGORITHM_CPPTHREAD_H

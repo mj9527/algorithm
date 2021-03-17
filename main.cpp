@@ -184,7 +184,8 @@ int main() {
     //testInt();
 
     //RecoveryIP::TestIP();
-    testMin();
+    //testMin();
+    CppThread::TestThreadModel();
     return 0;
 }
 
