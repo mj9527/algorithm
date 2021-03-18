@@ -8,6 +8,11 @@
 #include <thread>
 #include <iostream>
 
+typedef struct {
+    std::condition_variable condition;
+    std::mutex mu;
+}CppEvent;
+
 namespace CppThread {
     void TestThreadModel();
 
@@ -30,11 +35,8 @@ namespace CppThread {
         void SampleStack();
 
     private:
-        std::condition_variable work_event_;
-        std::mutex work_mutex_;
-
-        std::condition_variable exit_event_;
-        std::mutex exit_mutex_;
+        CppEvent work_event_;
+        CppEvent exit_event_;
 
     private:
         std::atomic<bool> wakeup_flag_;

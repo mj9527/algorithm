@@ -17,7 +17,8 @@ void TestThreadModel() {
 }
 
 ThreadModel::ThreadModel() {
-
+    exit_flag_ = true;
+    is_running_ = false;
 }
 
 ThreadModel::~ThreadModel() {
@@ -25,20 +26,26 @@ ThreadModel::~ThreadModel() {
 }
 
 int ThreadModel::StartThread() {
+    // jadge thread running state
+
     exit_flag_ = false;
-    is_running_ = true;
-    std::thread th(&ThreadModel::Run, this);
+    std::thread th([this]{
+        Run();
+    });
     th.detach();
     return 0;
 }
 
 int ThreadModel::StopThread() {
+    // jadge thread running state
+
     std::cout << "start stop thread" << std::endl;
 
     exit_flag_ = true;
-    work_event_.notify_one();
-    std::unique_lock<std::mutex> locker(exit_mutex_);
-    exit_event_.wait(locker, [this] {
+    work_event_.condition.notify_one();
+    
+    std::unique_lock<std::mutex> locker(exit_event_.mu);
+    exit_event_.condition.wait(locker, [this] {
         return !is_running_;
     });
 
@@ -48,14 +55,14 @@ int ThreadModel::StopThread() {
 
 int ThreadModel::WakeupThread() {
     wakeup_flag_ = true;
-    work_event_.notify_one();
+    work_event_.condition.notify_one();
 }
 
 void ThreadModel::Run() {
     is_running_ = true;
     while (!exit_flag_) {
-        std::unique_lock<std::mutex> locker(work_mutex_);
-        work_event_.wait(locker, [this] {
+        std::unique_lock<std::mutex> locker(work_event_.mu);
+        work_event_.condition.wait(locker, [this] {
             return (exit_flag_ == true) || (wakeup_flag_ == true);
         });
         if (exit_flag_) {
@@ -67,7 +74,7 @@ void ThreadModel::Run() {
     }
     is_running_ = false;
     std::cout << "thread terminate" << std::endl;
-    exit_event_.notify_one();
+    exit_event_.condition.notify_one();
 }
 
 void ThreadModel::SampleStack() {
