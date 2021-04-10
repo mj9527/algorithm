@@ -2,7 +2,6 @@
 
 #include "MergeSet.h"
 #include "MaxSquare.h"
-#include "SubArray.h"
 #include "Envelopes.h"
 #include "ReverseWord.h"
 #include "KMax.h"
@@ -10,33 +9,21 @@
 #include "AllOne.h"
 #include "MaxIncr.h"
 #include "MoveSome.h"
-#include "StringMulti.h"
-#include "SubString.h"
 #include "QuickSort.h"
 #include "MaxIsland.h"
-#include "ShortPath.h"
 #include "BinarySortedTree.h"
-#include "Stock.h"
 #include "ABSum.h"
 #include "MaxKuahao.h"
 #include "RotateMatrix.h"
 #include "LeftAndRight.h"
-#include "StringNumber.h"
 #include "GroupAnagrams.h"
-#include "TwoSum/TwoSum.h"
-#include "MyAtoi/MyAtoi.h"
 #include "MaxArea/MaxArea.h"
 #include "GenerateParenthesis/GenerateParenthesis.h"
 #include "RemoveElement/RemoveElement.h"
 #include "LongestValidParentheses/LongestValidParentheses.h"
-#include "AddTwoBigNumber/AddTwoBigNumber.h"
 #include "SearchRotate/RotateSearch.h"
-#include "SequencePrint/SequencePrint.h"
-#include "FooBar/FooBar.h"
-#include "ZeroEventOdd/ZeroEventOdd.h"
-#include "H2O/H2O.h"
-#include "FizzBuzz/FizzBuzz.h"
 #include "RecoveryIP/RecoveryIP.h"
+#include "Path/SimplifyPath.h"
 
 void TestArray() {
     int **p = new int*[10];
@@ -182,6 +169,7 @@ int main() {
     //RecoveryIP::TestIP();
     //testMin();
     int a = 1;
+    TestSimple();
     return 0;
 }
 

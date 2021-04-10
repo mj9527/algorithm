@@ -87,13 +87,13 @@ public:
 
 void TestSimple() {
     SimplifyPath sp;
-//    string path = sp.simplifyPath("/a//b////c/d//././/..");
-//
-//    std::cout << path << std::endl;
+    string path = sp.simplifyPath("/a//b////c/d//././/..");
+
+    std::cout << path << std::endl;
 
     string s1 = "/../";
     string s2 = sp.simplifyPath(s1);
-    std::cout << s2 << std::endl;
+    std::cout << "result " << s2 << std::endl;
 
 }
 
