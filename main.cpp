@@ -18,12 +18,9 @@
 #include "BinarySortedTree.h"
 #include "Stock.h"
 #include "ABSum.h"
-#include "VirtualClass.h"
 #include "MaxKuahao.h"
-#include "Singleton.h"
 #include "RotateMatrix.h"
 #include "LeftAndRight.h"
-#include "LambdaSample.h"
 #include "StringNumber.h"
 #include "GroupAnagrams.h"
 #include "TwoSum/TwoSum.h"
@@ -34,7 +31,6 @@
 #include "LongestValidParentheses/LongestValidParentheses.h"
 #include "AddTwoBigNumber/AddTwoBigNumber.h"
 #include "SearchRotate/RotateSearch.h"
-#include "CppThread/CppThread.h"
 #include "SequencePrint/SequencePrint.h"
 #include "FooBar/FooBar.h"
 #include "ZeroEventOdd/ZeroEventOdd.h"
@@ -185,7 +181,7 @@ int main() {
 
     //RecoveryIP::TestIP();
     //testMin();
-    CppThread::TestThreadModel();
+    int a = 1;
     return 0;
 }
 
