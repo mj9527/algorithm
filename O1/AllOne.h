@@ -21,11 +21,6 @@ using namespace std;
 //GetMaxKey() - 返回 key 中值最大的任意一个。如果没有元素存在，返回一个空字符串"" 。
 //GetMinKey() - 返回 key 中值最小的任意一个。如果没有元素存在，返回一个空字符串""。
 
-struct Node {
-    int value;
-    set<string> keys;
-};
-
 class AllOne {
 public:
     /** Initialize your data structure here. */
@@ -104,6 +99,10 @@ public:
     }
 
 private:
+    struct Node {
+        int value;
+        set<string> keys;
+    };
     map<string, list<Node>::iterator> m_map;
     list<Node> m_lst;
 };
