@@ -5,8 +5,6 @@
 #include "Envelopes.h"
 #include "ReverseWord.h"
 #include "KMax.h"
-
-#include "AllOne.h"
 #include "MaxIncr.h"
 #include "MoveSome.h"
 #include "QuickSort.h"
@@ -15,7 +13,6 @@
 #include "ABSum.h"
 #include "MaxKuahao.h"
 #include "RotateMatrix.h"
-#include "LeftAndRight.h"
 #include "GroupAnagrams.h"
 #include "MaxArea/MaxArea.h"
 #include "GenerateParenthesis/GenerateParenthesis.h"
