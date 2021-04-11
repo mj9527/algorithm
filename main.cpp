@@ -3,10 +3,9 @@
 #include "MergeSet.h"
 #include "MaxSquare.h"
 #include "Envelopes.h"
-#include "ReverseWord.h"
+#include "ReverseWord/ReverseWord.h"
 #include "KMax.h"
-#include "MaxIncr.h"
-#include "MoveSome.h"
+#include "MaxIncr/MaxIncr.h"
 #include "QuickSort.h"
 #include "MaxIsland.h"
 #include "BinarySortedTree.h"
@@ -21,6 +20,7 @@
 #include "SearchRotate/RotateSearch.h"
 #include "RecoveryIP/RecoveryIP.h"
 #include "Path/SimplifyPath.h"
+#include "math/StringMulti.h"
 
 void TestArray() {
     int **p = new int*[10];
@@ -104,10 +104,10 @@ int main() {
     //TestSearch();
     //TestFindK();
 
-   // TestIncr();
+   TestIncr();
 
     //TestMoveSome();
-    //TestMul();
+    TestMul();
     //TestUnrepeated();
     //TestSubString();
     //TestQuickSort();
@@ -165,8 +165,8 @@ int main() {
 
     //RecoveryIP::TestIP();
     //testMin();
-    int a = 1;
-    TestSimple();
+//    int a = 1;
+//    TestSimple();
     return 0;
 }
 

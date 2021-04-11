@@ -1,4 +1,3 @@
-//
 // Created by 郑俊明 on 2020/5/12.
 //
 
@@ -13,20 +12,6 @@ using namespace std;
 class MaxIncr {
 public:
     int findLengthOfLCIS(vector<int>& nums) {
-//        int max = 0;
-////        int len = nums.size();
-////        int count = 1;
-////        for (int i=1; i<len; i++) {
-////            if (nums[i] > nums[i-1]) {
-////                count++;
-////            } else {
-////                if (count > max) {
-////                    max = count;
-////                }
-////                count =1;
-////            }
-////        }
-////        return max;
          int maxsofar = INT_MIN;
          int maxendinghere = 0;
          int len = nums.size();

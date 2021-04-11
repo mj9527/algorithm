@@ -27,7 +27,6 @@ public:
        }
 
        //std::cout << words.size() << std::endl;
-
        string result = "";
        for (int j= words.size()-1; j>=0; j--) {
            //std::cout << words[j] << std::endl;

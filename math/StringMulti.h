@@ -13,71 +13,64 @@ using namespace std;
 class StringMultiple {
 public:
     string multiply(string num1, string num2) {
-        int l1 = num1.size();
-        int l2 = num2.size();
-        int total = l1 + l2;
-        char* num3 = new char[total];
-        for (int i=0; i<total; i++) {
-            num3[i] = '0';
-        }
-        int a1 = 0;
-        int a2 = 0;
-        int sum = 0;
+        auto l1 = num1.size();
+        auto l2 = num2.size();
+        auto l3 = l1 + l2;
+        int* num3 = new int[l3]{0};
+        auto print = [=] {
+            return;
+            for (int i=0; i<l3; i++) {
+                std::cout << num3[i] << " ";
+            }
+            std::cout << std::endl;
+        };
+        print();
+
         for (int i=l1-1; i>=0; i--) {
             for (int j=l2-1; j>=0; j--) {
-                sum = mul(num1[i], num2[j]);
-                a1 = sum / 10;
-                a2 = sum % 10;
-
-                sum = num3[i+j+1] - '0' + a2;
-                num3[i+j+1] = sum % 10 + '0';
-                int bit = sum / 10;
-
-                sum = num3[i+j] - '0' + a1 + bit;
-                num3[i+j] = sum % 10 + '0';
-                bit = sum / 10;
-                if (bit > 0) {
-                    num3[i+j-1] = num3[i+j-1] - '0' + bit + '0';
+                int sum = mul(num1[i], num2[j]);
+                auto bit = addBit(num3[i+j+1], sum);
+                int k = 0;
+                while (bit > 0) {
+                    bit = addBit(num3[i+j-k], bit);
+                    k++;
                 }
-                PrintA(num3, total);
-            }
-        }
-        int from = 0;
-        for (; from < total; from++) {
-            if (num3[from] != '0') {
-                break;
+                print();
             }
         }
 
-        string s(num3+from, num3+total);
+        char* result = new char[l3];
+        bool bStart = false;
+        int k =0;
+        for (int i=0; i<l3; i++) {
+            if (num3[i] > 0) {
+                bStart = true;
+            }
+            if (bStart) {
+                result[k++] = (num3[i]+'0');
+            }
+        }
+        std::string str(result, k);
 
-        std::cout << s << std::endl;
+        std::cout << str << std::endl;
+        return "";
 
         delete [] num3;
-        return s;
+    }
+
+    int addBit(int& a1, const int a2) {
+        auto sum = a1 + a2;
+        a1 = sum % 10;
+        auto bit = sum /10;
+        return bit;
     }
 
     int mul(char a, char b) {
         int a1 = a - '0';
         int b1 = b - '0';
         int sum = a1 * b1;
-        //std::cout << a1 << " " << b1 << " " << sum << std:: endl;
         return sum;
     }
-
-    void PrintA(char*p, int total) {
-        for (int i=0; i<total; i++) {
-             std::cout << p[i];
-        }
-        std::cout << std::endl;
-    }
-
-    void add (int a, int b, int&c, int& bit) {
-        int sum = a + b;
-        c = sum % 10;
-        bit = sum /10;
-    }
-
 };
 
 
